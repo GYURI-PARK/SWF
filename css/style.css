@@ -273,6 +273,8 @@ section {
     font-weight: bold;
     display: flex;
     max-width: 240px;
+    white-space: nowrap;
+    overflow: hidden;
 }
 
 li a:hover{
