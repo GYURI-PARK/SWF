@@ -72,7 +72,7 @@ header{
 }
 
 .head-blog a:hover {
-    color: aqua;
+    color: #fff;
     cursor: pointer;
     font-size: 1.5rem;
     transition: 0.4s;
@@ -84,7 +84,7 @@ header{
 }
 
 .head-program a:hover {
-    color: aqua;
+    color: #fff;
     cursor: pointer;
     font-size: 1.5rem;
     transition: 0.4s;
@@ -395,7 +395,7 @@ ul li img:active {
 
 #backtotop.show:hover{
     cursor:pointer;
-    background-color:rgb(246, 255, 196);
+    background-color: #fff;
 }
 
 /*backtotop의 show 클래스 */
