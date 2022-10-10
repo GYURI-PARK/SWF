@@ -271,10 +271,11 @@ section {
     animation-play-state: paused;
     cursor: pointer;
 }
-  
+
+
 .flow-wrap {
-    animation: textLoop 10s linear infinite;
-    padding-right: 1.4881vw;
+    animation: textLoop 8s linear infinite;
+    /* padding-right: 1.4881vw; */
 }
   
 .choreo-container{
@@ -333,8 +334,8 @@ li a:hover{
 
 footer{
     background-color: #111;
-    padding-bottom:1rem;
-    margin-bottom: 1rem;
+    /* padding-bottom:1rem;
+    margin-bottom: 1rem; */
 }
 
 .footer-message{

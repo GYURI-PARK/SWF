@@ -36,7 +36,6 @@ backToTop.addEventListener('click', moveBackToTop);
 // ==================================================================
 
 
-/*
 function transformNext(event) {
   const slideNext = event.target;
   const slidePrev = slideNext.previousElementSibling;
@@ -67,7 +66,7 @@ function transformNext(event) {
   videoList.style.tranform = 'translateX(' + String(activeLi) + 'px)';
   videoList.setAttribute('data-position', activeLi)
 }
-*/
+
 function transformNext(){}
 
 function transformPrev(event) {
