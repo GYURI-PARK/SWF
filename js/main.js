@@ -67,8 +67,6 @@ function transformNext(event) {
   videoList.setAttribute('data-position', activeLi)
 }
 
-function transformNext(){}
-
 function transformPrev(event) {
   const slidePrev = event.target;
   // 현재 클릭 이벤트를 받은 요소를 slidePrev로 정의
