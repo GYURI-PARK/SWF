@@ -36,36 +36,36 @@ backToTop.addEventListener('click', moveBackToTop);
 // ==================================================================
 
 
-function transformNext(event) {
-  const slideNext = event.target;
-  const slidePrev = slideNext.previousElementSibling;
+// function transformNext(event) {
+//   const slideNext = event.target;
+//   const slidePrev = slideNext.previousElementSibling;
 
-  const videoList = slideNext.parentElement.parentElement.nextElementSibling;
-  let activeLi = videoList.getAttribute("data-position")
-  const liList = videoList.getElementsByTagName('li');
+//   const videoList = slideNext.parentElement.parentElement.nextElementSibling;
+//   let activeLi = videoList.getAttribute("data-position")
+//   const liList = videoList.getElementsByTagName('li');
 
-  //카드들이 오른쪽으로 이동가능 한 경우
-  if(Number(activeLi) < 0) {
-    activeLi = Number(activeLi) + 260;
-    //video-card width: 240px + margin: 20px
+//   //카드들이 오른쪽으로 이동가능 한 경우
+//   if(Number(activeLi) < 0) {
+//     activeLi = Number(activeLi) + 260;
+//     //video-card width: 240px + margin: 20px
     
-    // 왼쪽에 있던 카드가 오른쪽으로 이동했다면, 다시 왼쪽으로도 갈 수 있으니깐 prev버튼 활성화
-    slidePrev.style.color = '#2f3059'; //활성화
-    slidePrev.videoList.add('slide-prev-hover');
-    slidePrev.addEventListener('click', transformPrev);
+//     // 왼쪽에 있던 카드가 오른쪽으로 이동했다면, 다시 왼쪽으로도 갈 수 있으니깐 prev버튼 활성화
+//     slidePrev.style.color = '#2f3059'; //활성화
+//     slidePrev.videoList.add('slide-prev-hover');
+//     slidePrev.addEventListener('click', transformPrev);
     
-    // 맨 왼쪽에 보이는 카드가 첫번째 카드라면, next버튼은 비활성화 되어야 함
-    if (Number(activeLi) === 0 ) {
-      slideNext.style.color = '#cfd8dc';  //비활성화
-      slideNext.videoList.remove('slide-next-hover');
-      slideNext.removeEventListener('click', transformNext);
-    }
-  }
+//     // 맨 왼쪽에 보이는 카드가 첫번째 카드라면, next버튼은 비활성화 되어야 함
+//     if (Number(activeLi) === 0 ) {
+//       slideNext.style.color = '#cfd8dc';  //비활성화
+//       slideNext.videoList.remove('slide-next-hover');
+//       slideNext.removeEventListener('click', transformNext);
+//     }
+//   }
 
-  videoList.style.transition = 'transform 1s';
-  videoList.style.tranform = 'translateX(' + String(activeLi) + 'px)';
-  videoList.setAttribute('data-position', activeLi)
-}
+//   videoList.style.transition = 'transform 1s';
+//   videoList.style.tranform = 'translateX(' + String(activeLi) + 'px)';
+//   videoList.setAttribute('data-position', activeLi)
+// }
 
 function transformPrev(event) {
   const slidePrev = event.target;
@@ -86,12 +86,12 @@ function transformPrev(event) {
     if(videoList.clientWidth > (liList.length * 260 + Number(activeLi))) {
       slidePrev.style.color = '#c8c8c8';
       slidePrev.videoList.remove('slide-prev-hover');
-      slidePrev.removeEventListener('click', transformPrev);
+      //slidePrev.removeEventListener('click', transformPrev);
     } 
 
     slideNext.style.color = '#2f3059';
     slideNext.videoList.add('slide-next-hover');
-    slideNext.addEventListener('click', transformNext);
+    //slideNext.addEventListener('click', transformNext);
   }
   videoList.style.transition = 'transform 1s';
   videoList.style.transform = 'translateX(' + String(activeLi) + 'px)';
