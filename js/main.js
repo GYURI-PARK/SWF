@@ -67,36 +67,36 @@ backToTop.addEventListener('click', moveBackToTop);
 //   videoList.setAttribute('data-position', activeLi)
 // }
 
-function transformPrev(event) {
-  const slidePrev = event.target;
-  // 현재 클릭 이벤트를 받은 요소를 slidePrev로 정의
-  const slideNext = slidePrev.nextElementSibling;
+// function transformPrev(event) {
+//   const slidePrev = event.target;
+//   // 현재 클릭 이벤트를 받은 요소를 slidePrev로 정의
+//   const slideNext = slidePrev.nextElementSibling;
 
-  // ul 태그 선택
-  const videoList = slidePrev.parentElement.parentElement.nextElementSibling;
-  let activeLi = videoList.getAttribute('data-position');
-  // activeLi = data-position에 있는 현재 위치
-  const liList = videoList.getElementsByTagName('li');
+//   // ul 태그 선택
+//   const videoList = slidePrev.parentElement.parentElement.nextElementSibling;
+//   let activeLi = videoList.getAttribute('data-position');
+//   // activeLi = data-position에 있는 현재 위치
+//   const liList = videoList.getElementsByTagName('li');
 
-  // video card들이 오른쪽으로 넘친 경우 = 왼쪽 이동 가능 = slidePrev 활성화
-  if(videoList.clientWidth < (liList.length * 260 + Number(activeLi))){
-    activeLi = Number(activeLi) - 260;    // 현재 위치를 왼쪽으로 260px만큼 이동
+//   // video card들이 오른쪽으로 넘친 경우 = 왼쪽 이동 가능 = slidePrev 활성화
+//   if(videoList.clientWidth < (liList.length * 260 + Number(activeLi))){
+//     activeLi = Number(activeLi) - 260;    // 현재 위치를 왼쪽으로 260px만큼 이동
 
-    // 더이상 왼쪽으로 이동할 필요가 없는 경우 => slidePrev 비활성화
-    if(videoList.clientWidth > (liList.length * 260 + Number(activeLi))) {
-      slidePrev.style.color = '#c8c8c8';
-      slidePrev.videoList.remove('slide-prev-hover');
-      //slidePrev.removeEventListener('click', transformPrev);
-    } 
+//     // 더이상 왼쪽으로 이동할 필요가 없는 경우 => slidePrev 비활성화
+//     if(videoList.clientWidth > (liList.length * 260 + Number(activeLi))) {
+//       slidePrev.style.color = '#c8c8c8';
+//       slidePrev.videoList.remove('slide-prev-hover');
+//       //slidePrev.removeEventListener('click', transformPrev);
+//     } 
 
-    slideNext.style.color = '#2f3059';
-    slideNext.videoList.add('slide-next-hover');
-    //slideNext.addEventListener('click', transformNext);
-  }
-  videoList.style.transition = 'transform 1s';
-  videoList.style.transform = 'translateX(' + String(activeLi) + 'px)';
-  videoList.setAttribute('data-position', activeLi)
-}
+//     slideNext.style.color = '#2f3059';
+//     slideNext.videoList.add('slide-next-hover');
+//     //slideNext.addEventListener('click', transformNext);
+//   }
+//   videoList.style.transition = 'transform 1s';
+//   videoList.style.transform = 'translateX(' + String(activeLi) + 'px)';
+//   videoList.setAttribute('data-position', activeLi)
+// }
 
 // ============================================================================
 
@@ -104,8 +104,8 @@ function transformPrev(event) {
 const slidePrevList = document.getElementsByClassName('slide-prev');
 
 // i < slidePrevList.length
-for(var i = 0; i < slidePrevList.length; i++) {
-  
+for(let i = 0; i < slidePrevList.length; i++) {
+  console.log(i)
   // ul태그선택
   let videoList = slidePrevList[i].parentElement.parentElement.nextElementSibling;
   // li카드선택 
@@ -114,8 +114,8 @@ for(var i = 0; i < slidePrevList.length; i++) {
   // 카드들이 ul 태그 너비보다 넘치면, 왼쪽(PREV)버튼 활성화 + 오른쪽(NEXT)버튼 비활성화
   if (videoList.clientWidth < (liList.length * 260)) {
     // clientwidth = padding 포함한 px단위의 요소 가시너비 반환. (※ border, scrollbar, margin 제외)
-    slidePrevList[i].videoList.add('slide-prev-hover');
-    slidePrevList[i].addEventListener('click', transformPrev);
+    // slidePrevList[i].videoList.add('slide-prev-hover');
+    // slidePrevList[i].addEventListener('click', transformPrev);
     //transformPrev : 아직 정의하지 않은 함수
   } else {
     // 카드들이 넘치지 않을 경우 -> 화살표 삭제
