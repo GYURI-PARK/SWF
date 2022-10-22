@@ -79,30 +79,30 @@ function transformPrev(event) {
   // 현재 클릭 이벤트를 받은 요소를 slidePrev로 정의
   const slideNext = slidePrev.nextElementSibling;
 
-  // // ul 태그 선택
-  // const videoList = slidePrev.parentElement.parentElement.nextElementSibling;
-  // let activeLi = videoList.getAttribute('data-position');
-  // // activeLi = data-position에 있는 현재 위치
-  // const liList = videoList.getElementsByTagName('li');
+  // ul 태그 선택
+  const videoList = slidePrev.parentElement.parentElement.nextElementSibling;
+  let activeLi = videoList.getAttribute('data-position');
+  // activeLi = data-position에 있는 현재 위치
+  const liList = videoList.getElementsByTagName('li');
 
-  // // video card들이 오른쪽으로 넘친 경우 = 왼쪽 이동 가능 = slidePrev 활성화
-  // if(videoList.clientWidth < (liList.length * 260 + Number(activeLi))){
-  //   activeLi = Number(activeLi) - 260;    // 현재 위치를 왼쪽으로 260px만큼 이동
+  // video card들이 오른쪽으로 넘친 경우 = 왼쪽 이동 가능 = slidePrev 활성화
+  if(videoList.clientWidth < (liList.length * 260 + Number(activeLi))){
+    activeLi = Number(activeLi) - 260;    // 현재 위치를 왼쪽으로 260px만큼 이동
 
-  //   // 더이상 왼쪽으로 이동할 필요가 없는 경우 => slidePrev 비활성화
-  //   if(videoList.clientWidth > (liList.length * 260 + Number(activeLi))) {
-  //     slidePrev.style.color = '#c8c8c8';
-  //     slidePrev.videoList.remove('slide-prev-hover');
-  //     //slidePrev.removeEventListener('click', transformPrev);
-  //   } 
+    // 더이상 왼쪽으로 이동할 필요가 없는 경우 => slidePrev 비활성화
+    if(videoList.clientWidth > (liList.length * 260 + Number(activeLi))) {
+      slidePrev.style.color = '#c8c8c8';
+      slidePrev.videoList.remove('slide-prev-hover');
+      //slidePrev.removeEventListener('click', transformPrev);
+    } 
 
-  //   slideNext.style.color = '#2f3059';
-  //   slideNext.videoList.add('slide-next-hover');
-  //   //slideNext.addEventListener('click', transformNext);
-  // }
-  // videoList.style.transition = 'transform 1s';
-  // videoList.style.transform = 'translateX(' + String(activeLi) + 'px)';
-  // videoList.setAttribute('data-position', activeLi)
+    slideNext.style.color = '#2f3059';
+    slideNext.classList.add('slide-next-hover');
+    //slideNext.addEventListener('click', transformNext);
+  }
+  videoList.style.transition = 'transform 1s';
+  videoList.style.transform = 'translateX(' + String(activeLi) + 'px)';
+  videoList.setAttribute('data-position', activeLi)
 }
 
 // ============================================================================
