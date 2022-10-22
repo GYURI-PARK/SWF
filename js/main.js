@@ -90,11 +90,11 @@ function transformPrev(event) {
     activeLi = Number(activeLi) - 260;    // 현재 위치를 왼쪽으로 260px만큼 이동
 
     // 더이상 왼쪽으로 이동할 필요가 없는 경우 => slidePrev 비활성화
-    if(videoList.clientWidth > (liList.length * 260 + Number(activeLi))) {
-      slidePrev.style.color = '#c8c8c8';
-      slidePrev.videoList.remove('slide-prev-hover');
-      //slidePrev.removeEventListener('click', transformPrev);
-    } 
+    // if(videoList.clientWidth > (liList.length * 260 + Number(activeLi))) {
+    //   slidePrev.style.color = '#c8c8c8';
+    //   slidePrev.videoList.remove('slide-prev-hover');
+    //   //slidePrev.removeEventListener('click', transformPrev);
+    // } 
 
     slideNext.style.color = '#2f3059';
     slideNext.classList.add('slide-next-hover');
@@ -116,11 +116,9 @@ for(let i = 0; i < slidePrevList.length; i++) {
   let videoList = slidePrevList[i].parentElement.parentElement.nextElementSibling;
   // li카드선택 
   let liList = videoList.getElementsByTagName('li');
-  console.log('if 문 밖 videoList', videoList)
   // 카드들이 ul 태그 너비보다 넘치면, 왼쪽(PREV)버튼 활성화 + 오른쪽(NEXT)버튼 비활성화
   if (videoList.clientWidth < (liList.length * 260)) {
     // clientwidth = padding 포함한 px단위의 요소 가시너비 반환. (※ border, scrollbar, margin 제외)
-    console.log('if 문 안 slidePrevList[0].videoList', slidePrevList[0].videoList)
     slidePrevList[i].classList.add('slide-prev-hover');
     slidePrevList[i].addEventListener('click', transformPrev);
     //transformPrev : 아직 정의하지 않은 함수
