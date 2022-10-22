@@ -121,7 +121,7 @@ for(let i = 0; i < slidePrevList.length; i++) {
   if (videoList.clientWidth < (liList.length * 260)) {
     // clientwidth = padding 포함한 px단위의 요소 가시너비 반환. (※ border, scrollbar, margin 제외)
     console.log('if 문 안 slidePrevList[0].videoList', slidePrevList[0].videoList)
-    slidePrevList[i].videoList.add('slide-prev-hover');
+    slidePrevList[i].classList.add('slide-prev-hover');
     slidePrevList[i].addEventListener('click', transformPrev);
     //transformPrev : 아직 정의하지 않은 함수
   } else {
