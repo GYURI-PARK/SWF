@@ -111,6 +111,7 @@ for(let i = 0; i < slidePrevList.length; i++) {
   // li카드선택 
   let liList = videoList.getElementsByTagName('li');
   // 카드들이 ul 태그 너비보다 넘치면, 왼쪽(PREV)버튼 활성화 + 오른쪽(NEXT)버튼 비활성화
+
   if (videoList.clientWidth < (liList.length * 260)) {
     // clientwidth = padding 포함한 px단위의 요소 가시너비 반환. (※ border, scrollbar, margin 제외)
     slidePrevList[i].classList.add('slide-prev-hover');
