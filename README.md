@@ -13,8 +13,11 @@
 </br>
 
 ## 🎯 Detail
-> 1. Crew 소개
+### 1. Crew 소개
 <img src="https://user-images.githubusercontent.com/93391058/206725333-e629f7cb-4590-407b-bf7c-3e154167247a.gif" width="80%">
+
+> 마우스 hover시 z-index값으로 움직임을 주어 마우스 위치 표시
+> 그림자를 이용해 입체감 표현
 
 </br>
 </br>
