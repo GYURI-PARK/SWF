@@ -16,8 +16,15 @@
 ### 1. Crew 소개
 <img src="https://user-images.githubusercontent.com/93391058/206725333-e629f7cb-4590-407b-bf7c-3e154167247a.gif" width="80%">
 
-> 마우스 hover시 z-index값으로 움직임을 주어 마우스 위치 표시
+> 마우스 hover시 z-index값으로 움직임을 주어 마우스 위치 표시 </br>
 > 그림자를 이용해 입체감 표현
+
+</br>
+
+### 2. 미션 별 dance 영상
+
+<img src="https://user-images.githubusercontent.com/93391058/206728535-b33bd0de-184e-48c1-8182-44cf05fe02e5.mov" width="80%">
+
 
 </br>
 </br>
