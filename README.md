@@ -16,14 +16,17 @@
 ### 1. Crew 소개
 <img src="https://user-images.githubusercontent.com/93391058/206725333-e629f7cb-4590-407b-bf7c-3e154167247a.gif" width="80%">
 
-> 마우스 hover시 z-index값으로 움직임을 주어 마우스 위치 표시 </br>
-> 그림자를 이용해 입체감 표현
+> 1. 마우스 hover시 z-index값으로 움직임을 주어 마우스 위치 표시 </br>
+> 2. 그림자를 이용해 입체감 표현
 
 </br>
 
-### 2. 미션 별 dance 영상
+### 2. crew별 dance video
 
 <img width="681" alt="image" src="https://user-images.githubusercontent.com/93391058/206730316-5b4d0518-231a-48ee-b056-4efa78ea9031.png">
+
+
+> 1. 각각의 mission별로 구분 
 
 
 </br>
