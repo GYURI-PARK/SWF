@@ -23,7 +23,7 @@
 
 ### 2. 미션 별 dance 영상
 
-<img src="https://user-images.githubusercontent.com/93391058/206728535-b33bd0de-184e-48c1-8182-44cf05fe02e5.mov" width="80%">
+<img width="681" alt="image" src="https://user-images.githubusercontent.com/93391058/206730316-5b4d0518-231a-48ee-b056-4efa78ea9031.png">
 
 
 </br>
